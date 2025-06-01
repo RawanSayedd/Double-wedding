@@ -20,7 +20,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Lobster&family=Oleo+Script:wght@400;700&family=Permanent+Marker&family=Rakkas&family=Satisfy&family=Tangerine:wght@400;700&family=Ysabeau+SC&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Lobster&family=Oleo+Script:wght@400;700&family=Permanent+Marker&family=Rakkas&family=Satisfy&family=Tangerine:wght@400;700;900&family=Ysabeau+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -30,7 +34,58 @@
         <div class="flap front"></div>
         <div class="flap top"></div>
         <div class="letter">
-          <p>Your invitation text can go here</p>
+          <section class="page page-1">
+            <div class="quran">
+              <p>بِسْمِ ٱللّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+              <p>
+                وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا
+                لِّتَسْكُنُوا إِلَيْهَا، وَجَعَلَ بَيْنَكُم مَّوَدَّةً
+                وَرَحْمَةً (سورة الروم – 21)
+              </p>
+            </div>
+            <div class="letter-content">
+              <span
+                >"wij nodigen u van harte uit om samen met ons onze bruidloft te
+                vieren"</span
+              >
+            </div>
+            <div class="names">
+              <div class="first-names">
+                <h4 class="men">
+                  <span class="ismail">Ismail nil</span>
+                  <span class="dixon">Dixon seqouia smith </span>
+                </h4>
+              </div>
+              <span>&</span>
+              <div class="second-names">
+                <h4 class="women">
+                  <span class="omema">Oemeyma sefiani </span>
+                  <span class="halima">Halima sefiani </span>
+                </h4>
+              </div>
+            </div>
+            <div class="date-content">
+              <p>Wednsday, 30<sup>th</sup> of August, 2025.</p>
+              <p>6:00 PM</p>
+            </div>
+            <div class="location-content">
+              <p>lange Molenstraat 60, 1800 Vilvoorde</p>
+            </div>
+          </section>
+          
+  <section class="page page-2">
+    <h4>حضوركم يُسعدنا ويشرّفنا</h4>
+    <form class="attendance-form">
+      <label for="name">Naam:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="attend">Kom je?</label>
+      <select id="attend" name="attend">
+        <option value="yes">Ja</option>
+        <option value="no">Nee</option>
+      </select>
+
+      <button type="submit">Bevestig</button>
         </div>
         <img
           src="images/realistic-golden-wax-seal-stamp.png"

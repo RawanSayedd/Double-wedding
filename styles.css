@@ -7,7 +7,7 @@
 
 body {
   font-family: "tangerine", sans-serif;
-  background-color: #f8f7f3;
+  background-color: #e0ded5;
   color: #3c0008;
   height: 100vh;
   display: flex;
@@ -18,12 +18,16 @@ body {
 
 #wrapper {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .envelope {
   width: 320px;
   height: 180px;
-
   background: #6e0f13;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.25);
   position: relative;
@@ -99,22 +103,79 @@ body {
 .envelope .letter {
   position: absolute;
   width: 308px;
-  height: 150px;
-  top: 20px;
+  height: 170px;
+  top: 9px;
   left: 6px;
-  font-size: 16px;
-  padding: 15px;
+  font-size: 24px;
+  padding: 0;
   background: #fff8f0;
   border: 2px solid #bba;
   z-index: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   color: #3c0008;
   animation-duration: 2s;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
   transform-style: preserve-3d;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.letter {
+  overflow: hidden;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.page-2 {
+  background-color: #fff4eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.attendance-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+}
+
+.attendance-form input,
+.attendance-form select,
+.attendance-form button {
+  padding: 6px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.attendance-form button {
+  background-color: #6e0f13;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.attendance-form button:hover {
+  background-color: #5c0a0a;
 }
 
 .envelope.open .letter {
@@ -122,8 +183,8 @@ body {
 }
 
 img.stamp {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   bottom: 70px;
   right: 140px;
@@ -141,6 +202,46 @@ img.stamp:hover {
 
 img.stamp:active {
   transform: scale(0.95);
+}
+
+.quran {
+  font-size: 0.5rem;
+  font-family: "Amiri Quran", serif;
+  text-align: center;
+}
+.letter-content span {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.names {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.names .men {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.names .women {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.date-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.date-content,
+.location-content {
+  font-size: 0.9rem;
 }
 
 /* Animations */
