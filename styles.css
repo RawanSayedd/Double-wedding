@@ -120,51 +120,67 @@ body {
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
   transform-style: preserve-3d;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  overflow-y: auto;
+
+  overflow-y: scroll;
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100vh;
+  height: 170px;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+.page-1 {
+  padding-bottom: 5px;
 }
 
 .letter {
   overflow: hidden;
 }
-
-.page {
-  width: 100%;
-  height: 100vh;
-  padding: 10px;
-  box-sizing: border-box;
+section {
+  background-color: #fff8f0 !important;
 }
 
 .page-2 {
-  background-color: #fff4eb;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 0;
+}
+.page > h4 {
+  font-family: "Amiri Quran", serif;
+  font-size: 0.8rem;
+  margin-bottom: 3px;
+  padding-top: 0px;
 }
 
 .attendance-form {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  gap: 10px;
-  width: 80%;
+  gap: 3px;
+  width: 70%;
 }
-
+.attendance-form label {
+  font-size: 1rem;
+  font-weight: 700;
+}
 .attendance-form input,
 .attendance-form select,
 .attendance-form button {
-  padding: 6px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 5px;
+  font-size: 0.5rem;
+  border: 0.5px solid #fff8f0;
+  border-radius: 1px;
 }
 
 .attendance-form button {
@@ -172,10 +188,22 @@ body {
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 60%;
+  margin-bottom: 2px;
+}
+.attendance-form button a {
+  color: #fff8f0;
+  text-decoration: none;
 }
 
 .attendance-form button:hover {
   background-color: #5c0a0a;
+}
+.response-message {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .envelope.open .letter {
@@ -242,6 +270,27 @@ img.stamp:active {
 .date-content,
 .location-content {
   font-size: 0.9rem;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-family: "Ysabeau SC", sans-serif; /* match your fonts */
+  font-size: 14px;
+  color: #555; /* text color */
+  z-index: 1000;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: center;
+  width: fit-content;
+  max-width: 90%;
+  white-space: nowrap;
+}
+#footer a {
+  color: #555;
 }
 
 /* Animations */

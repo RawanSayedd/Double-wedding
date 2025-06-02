@@ -75,17 +75,29 @@
           
   <section class="page page-2">
     <h4>حضوركم يُسعدنا ويشرّفنا</h4>
-    <form class="attendance-form">
-      <label for="name">Naam:</label>
-      <input type="text" id="name" name="name" required />
+  <div class="attendance-form">
+            <label for="guest-name">Your Name:</label>
+            <input
+              type="text"
+              id="guest-name"
+              placeholder="Please enter your name(s)"
+              required
+            />
+            <label class="will" for="attendance">Will you be attending?</label>
+            <select id="attendance">
+              <option value="yes">Yes, I'll be there!</option>
+              <option value="no">No, I can't make it.</option>
+            </select>
 
-      <label for="attend">Kom je?</label>
-      <select id="attend" name="attend">
-        <option value="yes">Ja</option>
-        <option value="no">Nee</option>
-      </select>
-
-      <button type="submit">Bevestig</button>
+            <button id="submit-response">Submit</button>
+                      <div
+            id="response-message"
+            class="response-message"
+            style="display: none"
+          >
+            <!-- Message will be dynamically inserted here -->
+          </div>          
+          </div>
         </div>
         <img
           src="images/realistic-golden-wax-seal-stamp.png"
@@ -95,6 +107,16 @@
         />
       </div>
     </div>
+        <footer id="footer">
+      <p>
+        Created by
+        <a
+          href="https://www.linkedin.com/in/rawan-sayed-089983169/"
+          target="_blank"
+          >Rawan sayed</a
+        >
+      </p>
+    </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
